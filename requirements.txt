@@ -1,5 +1,38 @@
+# ============================================================
+# EXAONE-4.0-1.2B 경량화 실험 환경
+# Google Colab Free (T4 16GB) 기준
+# ============================================================
+
+# 핵심: 양자화 (평가 서버 버전과 호환)
 llmcompressor
-autoawq
+compressed-tensors==0.13.0
+
+# 모델/데이터
+transformers>=4.54.0
+datasets
+tokenizers>=0.22.0
+safetensors
+sentencepiece
+huggingface-hub
+
+# 학습
+accelerate
 peft
 trl
-bitsandbytes
+bitsandbytes        # QLoRA 4-bit 학습용
+
+# AWQ 양자화 (03 노트북)
+autoawq
+
+# 유틸
+torch>=2.0.0
+numpy
+tqdm
+
+# ============================================================
+# 평가 서버 환경 참고 (evalSever_requirement.txt)
+# torch==2.9.0+cu128
+# vllm==0.14.1
+# compressed-tensors==0.13.0
+# transformers==4.57.3
+# ============================================================
