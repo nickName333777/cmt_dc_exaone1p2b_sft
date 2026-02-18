@@ -1,0 +1,5 @@
+llmcompressor
+autoawq
+peft
+trl
+bitsandbytes
